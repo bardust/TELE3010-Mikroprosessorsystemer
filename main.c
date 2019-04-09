@@ -57,7 +57,7 @@ int main(void) {
     }
     else {
       // Wait until button pressed, save timer value.
-      loop_until_bit_is_clear(BUTTON_PIN, BUTTON);
+      loop_until_spit_is_clear(BUTTON_PIN, BUTTON);
       timerValue = TCNT1 >> 4;
       /* each tick is approx 1/16 milliseconds, so we bit-shift divide */
 
@@ -66,7 +66,7 @@ int main(void) {
     }
 
     // Clear LEDs and start again.
-    LED_PORT = 0x00;
+    LED_PORT = 0xFF;
     printString("Press any key to try again.\r\n");
 
   }                                                  /* End event loop */
