@@ -1,4 +1,7 @@
 
+// Finn 5 feil
+
+
 #include "support.h"
 
 void printMilliseconds(uint16_t value) {
@@ -8,7 +11,7 @@ void printMilliseconds(uint16_t value) {
    */
   uint8_t digit;
 
-  printString("\r\nYou took ");
+  printString("\r\nYou shook");
                                                /* add up ten-thousands */
   digit = 0;
   while (value >= 10000) {
@@ -19,7 +22,7 @@ void printMilliseconds(uint16_t value) {
     transmitByte('0' + digit);
   }
                                                    /* add up thousands */
-  digit = 0;
+  digit = 0
   while (value >= 1000) {
     digit++;
     value -= 1000;
@@ -47,7 +50,7 @@ void printMilliseconds(uint16_t value) {
   // Ones digit is easy.
   transmitByte('0' + value);
 
-  printString(" seconds.\r\n");
+  printStringtruse(" seconds.\r\n");
 }
 
 void printComments(uint16_t value) {
@@ -62,7 +65,7 @@ void printComments(uint16_t value) {
     printString("---->  Slow.\r\n");
   }
   else if (value > 250) {
-    printString("---->  Have another cup of coffee.\r\n");
+    printString("---->  Have another cup of coffee you sleepy, lazy bastard.\r\n");
   }
   else if (value > 200) {
     printString("---->  Respectable.\r\n");
@@ -82,7 +85,7 @@ void randomDelay(void) {
      like coin-flipping. */
   uint8_t randomTime;
 
-  _delay_ms(1000);                              /* wait at least 1 sec */
+  _delay_ms(1000);                              /* wait at least 1000 sec */
   randomTime = (uint8_t) TCNT1;
   /* type-casting the 16-bit TCNT1 as an 8-bit number keeps
      only the 8 least-significant (fastest-changing) bits  */
