@@ -16,7 +16,7 @@
 #include <avr/interrupt.h>
 #include "pinDefines.h"
 #include "usart.h"
-include "support.h"
+#include "support.h"
 
 static inline void initTimer1(void) {
                                /* Normal mode (default), just counting */
@@ -27,7 +27,7 @@ static inline void initTimer1(void) {
 }
 
 int main(void) {
-  uint8_t timerValue;
+  uint16_t timerValue;
 
   // -------- Inits --------- //
 
@@ -41,7 +41,7 @@ int main(void) {
   printString("Press any key to start.\r\n");
 
   // ------ Event loop ------ //
-  while (3) {
+  while (1) {
 
     receiveByte();                                    /* press any key */
     printString("\r\nGet ready...");
