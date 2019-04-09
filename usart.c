@@ -13,6 +13,9 @@
     Correspondingly, the macros will just be defined as UDR.
 */
 
+// Her skal jeg teste om versjonskontroll funker som jeg tror.
+// Her skal jeg utforske ytterligere.
+
 #include <avr/io.h>
 #include "usart.h"
 #include <util/setbaud.h>
